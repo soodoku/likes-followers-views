@@ -1,0 +1,16 @@
+facebook-sdk==1.0.0a0
+google-api-python-client==1.3.1
+httplib2==0.9
+iso8601==0.1.10
+oauth2client==1.4.6
+oauthlib==0.7.2
+pyasn1==0.1.7
+pyasn1-modules==0.0.5
+requests==2.4.3
+requests-oauthlib==0.4.1
+rsa==3.1.4
+simplejson==3.6.5
+six==1.9.0
+tweepy==3.2.0
+uritemplate==0.6
+youtube-api-wrapper==0.2
