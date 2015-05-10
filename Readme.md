@@ -13,7 +13,7 @@ The script also produces an error.log file containing all the tracebacks and exc
 
 ### Instructions For Running the Script
 
-*Install the required packages:
+* Install the required packages:
 <code>pip install -r requirements.txt </code>
 * Enter [Facebook](https://code.google.com/apis/console) and [Twitter](https://apps.twitter.com/) keys to [options.ini](https://github.com/soodoku/likes-followers-views/blob/master/config/options.ini)
 * Download the [Google API key](https://code.google.com/apis/console) in json format and put in directory as: client_secrets.json
