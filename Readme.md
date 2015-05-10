@@ -13,16 +13,13 @@ The script also produces an error.log file containing all the tracebacks and exc
 
 ### Instructions For Running the Script
 
-Install the requirements:
+*Install the required packages:
 <code>pip install -r requirements.txt </code>
+* Enter [Facebook](https://code.google.com/apis/console) and [Twitter](https://apps.twitter.com/) keys to [options.ini](https://github.com/soodoku/likes-followers-views/blob/master/config/options.ini)
+* Download the [Google API key](https://code.google.com/apis/console) in json format and put in directory as: client_secrets.json
 
-* Copy all the facebook and twitter keys onto options.ini
-* Download the google api keys in json format and put in directory as: client_secrets.json
+Note:  
+Google Authenthication (API V3): The first time you run the script, you will be prompted via browser to authenticate the app. Choose accept and this will create a new json file in the working directory called app_name.py-oauth2.json.  
 
-Google Authenthication (API V3):
-The first time running the script you will get prompted via webbrowser to authenticate the app, choose accept and this will create a new json file in the working directory called Social_Media_Pinger.py-oauth2.json.  
-
-Main Script to run is Likes-Followers-Views.py
-
-Usage:
+Usage:  
 <code>python Likes-Followers-Views.py</code>
