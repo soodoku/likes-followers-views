@@ -1,26 +1,15 @@
 ## Likes Followers Views
 
-Monitors FB likes, Twitter followers, and Youtube channel subscribers and individual video views.
+Fetches FB likes, Twitter followers, and Youtube channel subscribers and individual video views for a given set of handles. 
 
-### Requirements
+Run a cronjob to ping regularly.
 
-* python 2.7
-* facebook-sdk==1.0.0a0
-* google-api-python-client==1.3.1
-* httplib2==0.9
-* oauth2client==1.4.6
-* oauthlib==0.7.2
-* pyasn1==0.1.7
-* pyasn1-modules==0.0.5
-* requests==2.4.3
-* requests-oauthlib==0.4.1
-* rsa==3.1.4
-* simplejson==3.6.5
-* six==1.9.0
-* tweepy==3.2.0
-* uritemplate==0.6
-* youtube-api-wrapper==0.2
+Takes a comma separated value file with the following columns: twitter_id, facebook_id, youtube_channel_id, video_id, likes, followers, subscribers, video_views
 
+The script appends timestamped columns carrying likes, followers, subscribers, video_views. For e.g., 
+likes 2015-01-31 03:50:10	followers 2015-01-31 03:50:10	subscribers 2015-01-31 03:50:10
+
+The script also produces an error.log file containing all the tracebacks and exceptions thrown by the Likes-Followers-Views Class, e.g. error when accessing an API. Can be set to debug to see all info for points of access and outputs. 
 
 ### Instructions For Running the Script
 
@@ -37,14 +26,3 @@ Main Script to run is Likes-Followers-Views.py
 
 Usage:
 <code>python Likes-Followers-Views.py</code>
-
-Input/output:
-
-Input: LFV.csv, a comma separated value file with the following columns: 
-twitter_id, facebook_id, youtube_channel_id, video_id, likes, followers, subscribers, video_views
-
-Output: LFV.csv, error.log
-Appends to LFV.csv timestamped columns carrying likes, followers, subscribers, video_views. for e.g., 
-likes 2015-01-31 03:50:10	followers 2015-01-31 03:50:10	subscribers 2015-01-31 03:50:10
-
-The error.log file contains all the tracebacks and exceptions thrown by the Likes-Followers-Views Class when accessing an API or any other exception. Can be set to debug to see all info for points of access and outputs. 
