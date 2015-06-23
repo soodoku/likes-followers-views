@@ -42,9 +42,9 @@ data <- read.csv("congress.csv")
 # Create column name with time stamp
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Get time
-current_time <- unclass(as.POSIXlt(Sys.time()))
+current_time <- as.POSIXlt(Sys.time())
 # Concatenate hour, day, month, year 
-timecol <- paste0("fblike-", with(current_time, paste(c(hour, mday, mon, year), collapse="-")))
+timecol <- paste0("fblike-", paste(c(current_time$hour, current_time$mday, match(months(current_time), month.name), current_time$year+1900), collapse="-"))
 
 # Initialize the column
 data[,timecol] <- NA
