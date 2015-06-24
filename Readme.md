@@ -4,7 +4,10 @@ Fetch FB likes, Twitter followers, and Youtube channel subscribers and individua
 
 Run a cronjob to ping regularly.
 
+**Note** The scripts expect twitter handles, facebook usernames, and youtube ids to be in column names that are in [data/congress.csv](data/congress.csv)
+
 ### R
+
 * [Fetch FB Likes](in-r/fb_likes.R)
 * [Fetch Twitter Followers](in-r/twtr_followers.R)
 * [Fetch YouTube Views](in-r/yt_views.R)
@@ -25,7 +28,7 @@ The script also produces an error.log file containing all the tracebacks and exc
 
 * Install the required packages:
 `pip install -r requirements.txt`
-* Enter [Facebook](https://code.google.com/apis/console) and [Twitter](https://apps.twitter.com/) keys to [options.ini](https://github.com/soodoku/likes-followers-views/blob/master/config/options.ini)
+* Enter [Facebook](https://code.google.com/apis/console) and [Twitter](https://apps.twitter.com/) keys to [options.ini](config/options.ini)
 * Download the [Google API key](https://code.google.com/apis/console) in json format and put in directory as: client_secrets.json
 
 **Note:**  

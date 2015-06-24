@@ -18,9 +18,9 @@ Also look up Twitter rate limits:
 https://dev.twitter.com/rest/public/rate-limits
 
 "
-
-# Setup at your end:
-setup_twitter_oauth("app_id", "app_pass")
+# Setup at your end: (consumer_key, consumer_secret)
+# This will cause a webpage to open. Click on 'authorize app'
+setup_twitter_oauth("X", "Y")
 
 # Get followers of a single user
 getUser("HillaryClinton")$getFollowersCount()
@@ -40,7 +40,7 @@ data[,timecol] <- NA
 
 # Loop through the file
 for(i in 1:nrow(data)){
-	Sys.sleep(5)
+	Sys.sleep(5) # For twitter rate limits
 	resp <- tryCatch({getUser(data$twitter_account[i])}, error = function(e) { NA})
 	if(!is.na(resp)){
 		data[i,timecol] <- resp$getFollowersCount()
@@ -48,5 +48,4 @@ for(i in 1:nrow(data)){
 }
 
 # Write out the file
-write.csv(data, file="congress.csv", row.names = FALSE)
-
+write.csv(data, file="data/congress.csv", row.names = FALSE)

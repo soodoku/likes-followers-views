@@ -1,8 +1,6 @@
 "
 Track FB Likes of political pages
 
-@author: Gaurav Sood
-
 "
 
 library(httr)
@@ -37,7 +35,7 @@ content(resp)$likes
 # Doing it for a csv and creating a time stamp column
 
 # Read in data
-data <- read.csv("congress.csv")
+data <- read.csv("data/congress.csv")
 
 # Create column name with time stamp
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -61,5 +59,5 @@ for(i in 1:nrow(data)){
 }
 
 # Write out the file
-write.csv(data, file="congress.csv", row.names = FALSE)
+write.csv(data, file="data/ccongress.csv", row.names = FALSE)
 
