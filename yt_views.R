@@ -19,8 +19,8 @@ library(httr)
 
 oauth_endpoints("google")
 myapp <- oauth_app("google",
-  key = "X",
-  secret = "Y")
+  key = "998136489867-5t3tq1g7hbovoj46dreqd6k5kd35ctjn.apps.googleusercontent.com",
+  secret = "MbOSt6cQhhFkwETXKur-L9rN")
 
 # While setting up oauth, choose scope as youtube
 google_token <- oauth2.0_token(oauth_endpoints("google"), myapp, scope = "https://www.googleapis.com/auth/youtube")
