@@ -9,6 +9,14 @@ library(httr)
 library(devtools)
 install_github("pablobarbera/Rfacebook/Rfacebook")
 
+# Simple FB Tokening 
+# After Getting your App ID
+# Go to https://developers.facebook.com/tools/explorer/ for token
+library(Rfacebook)
+token <- "TOKEN" # put token here
+getUsers("hillaryclinton", token, private_info = TRUE)
+
+
 "
 Set up long term token
 
